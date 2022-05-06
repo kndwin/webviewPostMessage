@@ -53,19 +53,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <button
-          onClick={() => {
-            try {
-              window?.ReactNativeWebView?.postMessage("Hello from Next.js");
-            } catch (error) {
-              console.error(error);
-            } finally {
-              console.log("Message sent");
-            }
-          }}
-        >
-          {`Button`}
-        </button>
         {Boolean(eid) ? (
           <div id={`checkout-${eid}`}></div>
         ) : (
